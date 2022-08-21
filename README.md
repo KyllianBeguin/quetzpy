@@ -1,4 +1,4 @@
-# Quetzalcoatl :snake: :bird::eyeglasses:
+# Quetzalcoatl :snake: :bird: :eyeglasses:
 Understand how people are talking of your shows base on your query
 
 # I - WHAT IS IT?

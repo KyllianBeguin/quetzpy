@@ -1,2 +1,5 @@
 # Ignore true run script
 twitter_query_true.sh
+
+# Ignore the notebook
+Quetzalcoatl___EXPERIMENT_Data_Wrangling.ipynb
