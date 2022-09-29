@@ -1,5 +1,1 @@
-# Ignore true run script
-twitter_query_true.sh
-
-# Ignore the Jupyter notebook
-notebook_test.ipynb
+__pycache__/*
