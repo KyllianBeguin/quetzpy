@@ -1,5 +1,5 @@
 # Quetzalcoatl :snake: :bird: :eyeglasses:
-*Understand how people are talking of your shows base on your query*
+*Understand how people are talking of your shows based on your query*
 
 ## WHAT IS IT?
 The Queztzalcoatl project is the ability to **excavate the Twitter API to extract insights about any topic that people talk about**.  
