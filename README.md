@@ -1,38 +1,25 @@
 # Quetzalcoatl :snake: :bird: :eyeglasses:
-Understand how people are talking of your shows base on your query
+*Understand how people are talking of your shows base on your query*
 
-# I - WHAT IS IT?
-The Queztzalcoatl project is the ability to **excavate the Twitter API to extract insights about any topic that people talk about**. From a topic, you should be able to understand how people react using the power of sentiment analysis, text analysis.
+## WHAT IS IT?
+The Queztzalcoatl project is the ability to **excavate the Twitter API to extract insights about any topic that people talk about**.  
+From a topic, you should be able to understand how people react using the power of text mining.
 
-# II - WHAT'S INSIDE THIS REPO ?
+## WHAT'S INSIDE THIS REPO ?
 
-├── **data**  
-│   ├── **csv**  
-│   │   ├── data_PekinExpress.csv  
-│   │   ├── data_SoutienBooba.csv  
-│   │   └── data_webscraping.csv  
-│   └── **json**  
-│       ├── data_PekinExpress.json  
-│       ├── data_SoutienBooba.json  
-│       └── data_webscraping.json  
-├── insert_scraped_data.py  
-├── **Python_packages**  
-│   └── insert_data_functions.py  
-├── Quetzalcoatl___EXPERIMENT_Data_Wrangling.ipynb  
-├── README.md  
-├── run.sh  
-└── twitter_query.sh  
+├── test.py  
+├── Quetzalcoatl.py  
+├── .gitignore  
+└── README.md  
   
 You will find:
-* Data (folder): contains both csv and json data
-* Python_packages (folder): contains packages with functions for data processing, graphics creation...
-* insert_scraped_data.py: 
-* run.sh: script that runs the Quetzalcoatl
-* twitter_query.sh: script that ask Twitter API
-* Quetzalcoatl___EXPERIMENT_Data_Wrangling.ipynb: used to train myself on the data processing
+* test.py : all the tests performed before deploying the project
+* Quetzalcoatl.py : main file for the project
 
-# III - How to use the Quetzalcoatl?
+## HOW TO USE IT ?
 *Follow this [super nice tutorial]()*
 
-# IV - ABOUT THE PROJECT
-I started this project a long time ago as my very first Python project. At first, I used some webscraping with Selenium as I didn't know how to use and API. As my experience with Python grew, I switched to the API and bash scripting and started think automation.
+## ABOUT THE PROJECT
+I started this project a long time ago as my very first Python project.  
+At first, I used some webscraping with Selenium as I didn't know how to use an API. As my experience with Python grew, I switched to the Tweeter REST API and bash scripting and started think automation.  
+Now, I am willing to create a package, or even an API in which it would be possible to track an information inside a topic.
