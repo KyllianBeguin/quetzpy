@@ -1,4 +1,7 @@
-import tweepy as tw
+import modules.tweeter_connection as connect
+import modules.data_cleaning as data_cleaning
+import modules.data_miner as data_miner
+
 
 class Quetzalcoatl():
     """
@@ -11,42 +14,38 @@ class Quetzalcoatl():
         self.token = bearer_token
         self.topic = topic
         return
+    
+    def extract_tweets(self, lang = ""):
+        """
+        Use tweeter_connection module to :\n
+        * Connect to Tweeter REST API\n
+        * Run the query\n
+        * Split the dataset between the RT tweets and the non-RT ones
+        """
+        twitter_api = connect.connect_twitter(self.token)
+        _data = connect.query_tweeter(twitter_api = twitter_api, topic = self.topic, lang = lang)
 
-    def connect(self):
-        auth = tw.OAuth2BearerHandler(self.token)
-        api = tw.API(auth)
-        self.TweeterApi = api
+        self._data = _data
         return
     
-    def query_tweeter(self, language = ''):
+    def tweet_cleaner(self):
         """
-        Extract 100 tweets on the topic\n
-                """
-        # Extract the list of tweets
-        search = self.TweeterApi.search_tweets(q=self.topic, lang = language, count = 100)
-
-        # Clean the list and return the cleaned data
-        # Information to keep
-        keys_keep = ["text", "retweet_count", "favorite_count", "id"]
-        # For each item in search, extract and save in _data the information to keep
-        _data = {"item_" + str(i): {key:search[i]._json[key] for key in search[i]._json if key in keys_keep} for i in range(len(search))}
-        # For each item, update it by saving the user_id from search
-        # TO DO : S'OCCUPER DE ÇA
-        # _data.update({item["user_id"]: search[list(_data.keys()).index(item)]._json["user"]["id"] for item in list(_data.keys())})
-
-        
-        return _data
-    
-    def extract_tweets(self, language = ''):
+        Clean text from tweet
         """
-        Remove the 'RT tweets' from the set of tweets
+        self._data = data_cleaning.remove_duplicates(self)
+        for item in self._data:
+            self._data[item]['text_cleaned'] = data_cleaning.hashtag_remover(self._data[item]['text'].lower())
+            self._data[item]['text_cleaned'] = data_cleaning.websites_remover(self._data[item]['text_cleaned'])
+
+        return
+
+    def tweet_miner(self):
         """
-        _data = self.query_tweeter(language = language)
+        Extract data from tweet
+        """
 
-        keys = tuple(_data.keys())
-        _data_noRT = {item:_data[item] for item in keys if 'RT' not in _data[item]['text'][0:2]}
-        _data_RT = {item:_data[item] for item in keys if 'RT' in _data[item]['text'][0:2]}
+        for item in self._data:
+            self._data[item]['hashtags'] = data_miner.hashtag_extractor(self._data[item]['text'].lower())
+            self._data[item]['mentions'] = data_miner.mention_extractor(self._data[item]['text'].lower())
 
-        self._data = _data_noRT
-        self._data_RT = _data_RT
         return
