@@ -1,6 +1,6 @@
 import modules.tweeter_connection as connect
 import modules.data_cleaning as data_cleaning
-import modules.data_miner as data_miner
+import modules.data_mining as data_mining
 
 
 class Quetzalcoatl():
@@ -45,7 +45,7 @@ class Quetzalcoatl():
         """
 
         for item in self._data:
-            self._data[item]['hashtags'] = data_miner.hashtag_extractor(self._data[item]['text'].lower())
-            self._data[item]['mentions'] = data_miner.mention_extractor(self._data[item]['text'].lower())
+            self._data[item]['hashtags'] = data_mining.hashtag_extractor(self._data[item]['text'].lower())
+            self._data[item]['mentions'] = data_mining.mention_extractor(self._data[item]['text'].lower())
 
         return
