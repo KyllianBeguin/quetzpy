@@ -1,3 +1,6 @@
 __pycache__/*
 modules/__pycache__/*
 secret.json
+venv/*
+datas/*
+test.py
