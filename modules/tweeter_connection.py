@@ -17,12 +17,14 @@ def query_tweeter(twitter_api, topic, lang = ""):
     try :
         search = twitter_api.search_recent_tweets(query=f"{topic} lang:{lang} -is:retweet", 
             tweet_fields = ['author_id','created_at','text','source','lang'],
-            user_fields = ['name','username','location','verified']
+            user_fields = ['name','username','location','verified'],
+            max_results = 100
             )
     except:
         search = twitter_api.search_recent_tweets(query=f"{topic} -is:retweet", 
             tweet_fields = ['author_id','created_at','text','source','lang'],
-            user_fields = ['name','username','location','verified']
+            user_fields = ['name','username','location','verified'],
+            max_results = 100
             )
 
     _data = {"item_" + str(i): search.data[i].data for i in range(len(search.data))}

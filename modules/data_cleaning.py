@@ -1,11 +1,22 @@
 import re
 
-def hashtag_remover(tweet_text: str) -> str:
+def hashtags_remover(tweet_text: str) -> str:
     """
     Remove the hashtags from a tweet\n
     Returns a text without any hastags
     """
     pattern = re.compile(r"\s#+\S+")
+
+    tweet_text_cleaned = pattern.sub("", tweet_text)
+
+    return tweet_text_cleaned
+
+def mentions_remover(tweet_text: str) -> str:
+    """
+    Remove the mentions from a tweet\n
+    Returns a text without any mentions
+    """
+    pattern = re.compile(r"\s@+\S+")
 
     tweet_text_cleaned = pattern.sub("", tweet_text)
 
@@ -55,3 +66,33 @@ def remove_duplicates(self) -> str:
     
     else:
         return self._data
+
+def get_big_text(tweets_text_list : list):
+    """
+    Make a big text with all the tweets
+    """
+
+    big_text = ' '.join(tweets_text_list)
+    big_text = big_text.replace('\n', ' ')
+    big_text = re.sub(r'https?:\/\/.\S+', "", big_text)
+    
+    return big_text
+
+def emojies_remover(big_text : str, lang_ = 'fr_core_news_sm'):
+    """
+    removes the emojies from the big text
+    """
+
+    import spacy
+    from spacymoji import Emoji
+
+    nlp = spacy.load(lang_)
+    nlp.add_pipe("emoji", first = True)
+
+    doc = nlp(big_text)
+    emojies = set([emoji[0] for emoji in doc._.emoji])
+
+    for emoji in emojies:
+        big_text = big_text.replace(emoji, '')
+
+    return big_text

@@ -1,6 +1,7 @@
 import modules.tweeter_connection as connect
 import modules.data_cleaning as data_cleaning
 import modules.data_mining as data_mining
+import modules.data_stats as data_stats
 
 
 class Quetzalcoatl():
@@ -32,9 +33,10 @@ class Quetzalcoatl():
         """
         Clean text from tweet
         """
-        self._data = data_cleaning.remove_duplicates(self)
+        # self._data = data_cleaning.remove_duplicates(self) #PB02
         for item in self._data:
-            self._data[item]['text_cleaned'] = data_cleaning.hashtag_remover(self._data[item]['text'].lower())
+            self._data[item]['text_cleaned'] = data_cleaning.hashtags_remover(self._data[item]['text'].lower())
+            self._data[item]['text_cleaned'] = data_cleaning.mentions_remover(self._data[item]['text_cleaned'])
             self._data[item]['text_cleaned'] = data_cleaning.websites_remover(self._data[item]['text_cleaned'])
 
         return
@@ -47,5 +49,27 @@ class Quetzalcoatl():
         for item in self._data:
             self._data[item]['hashtags'] = data_mining.hashtag_extractor(self._data[item]['text'].lower())
             self._data[item]['mentions'] = data_mining.mention_extractor(self._data[item]['text'].lower())
+
+        self.sub_topics = data_mining.sub_topics_extractor([self._data[key]['text_cleaned'] for key, val in self._data.items()])
+        self.emojies = data_mining.emojies_extractor([self._data[key]['text_cleaned'] for key, val in self._data.items()])
+
+        return
+
+    def tweets_stats(self, stat_name = "all", param = []):
+        """
+        Compute statistics for the extracted tweets
+        """
+        stats_menu = {
+            "track words": data_stats.track_words,
+            "show occurrence": data_stats.show_occurrence,
+            "all": data_stats.track_all
+            }
+
+        import inspect
+
+        if "param" in inspect.signature(stats_menu[stat_name]).parameters:
+            self._result = stats_menu[stat_name](self, param)
+        else:
+            self._result = stats_menu[stat_name]()
 
         return
