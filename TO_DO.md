@@ -1,8 +1,11 @@
 # TO DO  
+- [ ] Fix data_cleaning.remove_duplicates(self) (#PB02)
+- [ ] Extract sub topics
+- [ ] Try to automate the loading of spacy libraries
 - [ ] Deal with hashtags with complexe construction  
     - [ ] With an underscore  
 - [ ] Get some stats  
-  - [ ] Occurence of hashtags  
+  - [ ] Number of hashtags (total)  
   - [ ] Dependency of other hashtags  
 
 
@@ -15,4 +18,6 @@
     - [X] With a dash, example : #day-one  
         -> Dashed hashtags doesn't work. In Twitter, such hashtags are not taken as full hastags. Only #day will be use as hashtag in #day-one  
 - [X] Make the 'link cleansing' function  
+- [X] Get some stats  
+  - [X] Number of occurrence of selected words
  
