@@ -1,21 +1,24 @@
 # Quetzalcoatl :snake: :bird: :eyeglasses:
-*Understand how people are talking of your shows based on your query*
+*Understand how people are talking of a topic based on a simple query*
 ![](./media./../media/DALL·E%202022-11-15%2017.37.24%20-%20The%20body%20of%20a%20neon%20Quetzalcoatl%20,%20digital%20art.png)
 
 ## SUMMARY
 - [Quetzalcoatl :snake: :bird: :eyeglasses:](#quetzalcoatl-snake-bird-eyeglasses)
   - [SUMMARY](#summary)
-  - [ 1. WHAT IS IT?](#-1-what-is-it)
-  - [ 2. WHAT'S INSIDE THIS REPO ?](#-2-whats-inside-this-repo-)
-  - [ 3. HOW TO USE IT ?](#-3-how-to-use-it-)
-  - [ 4. ABOUT THE PROJECT](#-4-about-the-project)
-  - [ 5. CONTACT THE AUTHOR](#-5-contact-the-author)
+  - [1. WHAT IS IT?](#1-what-is-it)
+  - [2. WHAT'S INSIDE THIS REPO ?](#2-whats-inside-this-repo-)
+  - [3. HOW TO USE IT ?](#3-how-to-use-it-)
+  - [4. ABOUT THE PROJECT](#4-about-the-project)
+  - [5. CONTACT THE AUTHOR](#5-contact-the-author)
+  - [6. CONTRIBUTE](#6-contribute)
 
-## <a name="whatisit"></a> 1. WHAT IS IT? 
+## 1. WHAT IS IT? 
 The Queztzalcoatl project is the ability to **excavate the Twitter API to extract insights about any topic that people talk about**.  
 From a topic, you should be able to understand how people react using the power of text mining.
 
-## <a name="whatinsiiderepo"></a> 2. WHAT'S INSIDE THIS REPO ?
+*[Go to top page](#summary)*
+
+## 2. WHAT'S INSIDE THIS REPO ?
 ```
 Quetzalcoatl
 ├── modules  
@@ -41,8 +44,9 @@ You will find:
 | Quetzalcoatl.py | Main class |   
 | TO_DO.md | To keep track of all the stuff I did on the project |   
 
+*[Go to top page](#summary)*
 
-## <a name="howtouseit"></a> 3. HOW TO USE IT ?
+## 3. HOW TO USE IT ?
 There is a really cool demo here {[LINK](demo.py)}  
 
 :one: First, ss the Quetzalcoatl is going to query Twitter's API, you need to put your **bearer token** in the [bearer_token.json](bearer_token.json) file
@@ -72,9 +76,17 @@ Here is a table that describe each parameter:
 python ./main.py
 ```
 
-## <a name="abouttheproject"></a> 4. ABOUT THE PROJECT
-> I started this project a long time ago as my very first Python project. At first, I used some webscraping with Selenium as I didn't know how to use an API. As my experience with Python grew, I switched to the Tweeter REST API and bash scripting and started think automation. Now, I am willing to create a package, or even an API in which it would be possible to track an information inside a topic.
+*[Go to top page](#summary)*
 
-## <a name="contactauthor"></a> 5. CONTACT THE AUTHOR
+## 4. ABOUT THE PROJECT
+> I started this project a long time ago as my very first Python project. At first, I used some webscraping with Selenium as I didn't know how to use an API. As my experience with Python grew, I switched to the Twitter REST API and bash scripting and started think automation. Now, I am willing to create a package, or even an API inside which it would be possible to track an information inside a topic.
+
+*[Go to top page](#summary)*
+
+## 5. CONTACT THE AUTHOR
 > You can reach me on Twitter {[LINK](https://twitter.com/BeguinKyllian)}  
 > I am also on LinkedIn {[LINK](https://www.linkedin.com/in/kyllian-b%C3%A9guin-733bbb150/)}
+
+## 6. CONTRIBUTE
+The Quetzalcoatl is a open source project. As so, if you feel intrested in helping the tool with me, it would be amazing!  
+To help you, two documents exists. The first one, the [TO DO list](./TO_DO.md), is a list of  every feature to implement. The second one, the [Isses table](./Issues.md), is a table of every issues raised and documented.
