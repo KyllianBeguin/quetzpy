@@ -14,7 +14,7 @@ main_setup = json.load(open("main_setup.json"))
 
 # Store parameters in variables
 nb_runs = main_setup["numbers of runs"]
-sleeping_time = main_setup["sleeping time"][0] * main_setup["sleeping time"][1]
+sleeping_time = main_setup["sleeping time"]
 words_to_catch = main_setup["words to catch"]
 topics = main_setup["topics"]
 lang = main_setup["lang"]
