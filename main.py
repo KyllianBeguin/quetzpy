@@ -17,6 +17,7 @@ nb_runs = main_setup["numbers of runs"]
 sleeping_time = main_setup["sleeping time"][0] * main_setup["sleeping time"][1]
 words_to_catch = main_setup["words to catch"]
 topics = main_setup["topics"]
+lang = main_setup["lang"]
 
 # ================================= INITIALIZE VARIABLES ==================================
 
@@ -73,7 +74,7 @@ def main():
 
     while current_run_nb <= nb_runs:
         for topic_ in topics:
-            data_ = run_quetzalcoatl(topic_ = topic_, words_to_catch = words_to_catch, lang_= 'fr')
+            data_ = run_quetzalcoatl(topic_ = topic_, words_to_catch = words_to_catch, lang_= lang)
             now_ = datetime.now()
             now_string = now_.strftime("%d/%m/%Y %H:%M:%S")
             data_json = {now_string:data_}
