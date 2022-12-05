@@ -1,11 +1,10 @@
 # TO DO  
 - [ ] Fix data_cleaning.remove_duplicates(self) (#PB02)
 - [ ] Extract sub topics
-- [ ] Try to automate the loading of spacy libraries
+- [ ] Try to automate the loading of spacy in [data_cleaning.emojies_remover](./modules/data_cleaning.py)
 - [ ] Deal with hashtags with complexe construction  
     - [ ] With an underscore  
 - [ ] Get some stats  
-  - [ ] Number of hashtags (total)  
   - [ ] Dependency of other hashtags  
 
 
