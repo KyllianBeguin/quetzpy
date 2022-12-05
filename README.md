@@ -17,6 +17,7 @@ From a topic, you should be able to understand how people react using the power 
 
 ## <a name="whatinsiiderepo"></a> 2. WHAT'S INSIDE THIS REPO ?
 ```
+Quetzalcoatl
 ├── modules  
 │   ├── data_cleaning.py  
 │   ├── data_mining.py  
@@ -66,7 +67,7 @@ Here is a table that describe each parameter:
 | `sleeping time` | The time, in seconds, to wait for the script before runing again. |
 | `lang` | Language |
 
-1. And **run main.py** !  
+:three: And **run main.py** !  
 ``` bash
 python ./main.py
 ```
