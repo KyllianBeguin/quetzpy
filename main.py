@@ -6,8 +6,7 @@ import json
 
 # ============================== LOAD PARAMETERS AND SECRET ===============================
 # Load secret
-# bearer_token = json.load(open("bearer_token.json"))["bearer_token"]
-bearer_token = json.load(open("secret.json"))["bearer_token"]
+bearer_token = json.load(open("bearer_token.json"))["bearer_token"]
 
 # Load parameters for main function
 main_setup = json.load(open("main_setup.json"))
