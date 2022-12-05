@@ -47,7 +47,6 @@ You will find:
 *[Go to top page](#summary)*
 
 ## 3. HOW TO USE IT ?
-There is a really cool demo here {[LINK](demo.py)}  
 
 :one: First, ss the Quetzalcoatl is going to query Twitter's API, you need to put your **bearer token** in the [bearer_token.json](bearer_token.json) file
 
