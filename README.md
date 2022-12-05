@@ -1,12 +1,15 @@
 # Quetzalcoatl :snake: :bird: :eyeglasses:
 *Understand how people are talking of your shows based on your query*
+![](./media./../media/DALL·E%202022-11-15%2017.37.24%20-%20The%20body%20of%20a%20neon%20Quetzalcoatl%20,%20digital%20art.png)
 
 ## SUMMARY
-1. [WHAT IS IT?](#whatisit)
-2. [WHAT'S INSIDE THIS REPO ?](#whatinsiiderepo)
-3. [HOW TO USE IT ?](#howtouseit)
-4. [ABOUT THE PROJECT](#abouttheproject)
-5. [CONTACT THE AUTHOR](#contactauthor)
+- [Quetzalcoatl :snake: :bird: :eyeglasses:](#quetzalcoatl-snake-bird-eyeglasses)
+  - [SUMMARY](#summary)
+  - [ 1. WHAT IS IT?](#-1-what-is-it)
+  - [ 2. WHAT'S INSIDE THIS REPO ?](#-2-whats-inside-this-repo-)
+  - [ 3. HOW TO USE IT ?](#-3-how-to-use-it-)
+  - [ 4. ABOUT THE PROJECT](#-4-about-the-project)
+  - [ 5. CONTACT THE AUTHOR](#-5-contact-the-author)
 
 ## <a name="whatisit"></a> 1. WHAT IS IT? 
 The Queztzalcoatl project is the ability to **excavate the Twitter API to extract insights about any topic that people talk about**.  
@@ -19,7 +22,8 @@ From a topic, you should be able to understand how people react using the power 
 │   ├── data_mining.py  
 │   └── tweeter_connection.py  
 ├── bearer_token.json  
-├── demo.py  
+├── main_setup.json  
+├── main.py  
 ├── Quetzalcoatl.py  
 ├── .gitignore  
 ├── README.md  
@@ -40,19 +44,31 @@ You will find:
 ## <a name="howtouseit"></a> 3. HOW TO USE IT ?
 There is a really cool demo here {[LINK](demo.py)}  
 
-1. As the Quetzalcoatl is going to query Twitter's API, you need to put your **bearer token** in the bearer_token.json file {[LINK](bearer_token.json)}  
+:one: First, ss the Quetzalcoatl is going to query Twitter's API, you need to put your **bearer token** in the [bearer_token.json](bearer_token.json) file
 
-2. Once you done it, go to the demo.py and **change the topic**:
-``` python
-Quetzal = Quetzalcoatl.Quetzalcoatl(bearer_token, topic = "#MarcheContreLaVieChere")
+:two: Once you done it, go to the main_setup.json to setup main script like this:
+``` json
+{
+    "words to catch" : ["sécurité", "Mont saint michel"],
+    "topics" : ["Normandie", "Bretagne"],
+    "numbers of runs" : 20,
+    "sleeping time" : [60,5],
+    "lang" : "fr"
+}
 ```
-3. Almost there, just need to **give a language** if you wish to:
-``` python
-Quetzal.extract_tweets(lang='')
-```
-4. And **run demo.py** !  
+
+Here is a table that describe each parameter:
+| parameter   | Description |
+| -------- | ----------- |
+| `words to catch` | List of words that you want to count in the bunch of tweets |
+| `topics` | List of topics that you want to query, can be hashtags or else |
+| `numbers of runs` | The number of times you want to run the script |
+| `sleeping time` | The time, in seconds, to wait for the script before runing again. |
+| `lang` | Language |
+
+1. And **run main.py** !  
 ``` bash
-python ./demo.py
+python ./main.py
 ```
 
 ## <a name="abouttheproject"></a> 4. ABOUT THE PROJECT
