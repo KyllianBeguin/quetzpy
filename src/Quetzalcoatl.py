@@ -1,7 +1,7 @@
-import modules.tweeter_connection as connect
-import modules.data_cleaning as data_cleaning
-import modules.data_mining as data_mining
-import modules.data_stats as data_stats
+import src.modules.tweeter_connection as connect
+import src.modules.data_cleaning as data_cleaning
+import src.modules.data_mining as data_mining
+import src.modules.data_stats as data_stats
 
 
 class Quetzalcoatl():

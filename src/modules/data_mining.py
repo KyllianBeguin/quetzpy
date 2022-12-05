@@ -1,5 +1,5 @@
 import re
-import modules.data_cleaning as data_cleaning
+import src.modules.data_cleaning as data_cleaning
 
 def hashtag_extractor(tweet_text: str) -> list:
     """

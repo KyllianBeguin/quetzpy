@@ -1,5 +1,5 @@
 # =================================== IMPORT LIBRARIES ====================================
-import Quetzalcoatl
+import src.Quetzalcoatl as Quetzalcoatl
 from datetime import datetime
 import time
 import json
