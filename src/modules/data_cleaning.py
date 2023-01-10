@@ -3,7 +3,8 @@ import re
 def hashtags_remover(tweet_text: str) -> str:
     """
     Remove the hashtags from a tweet\n
-    Returns a text without any hastags
+    :tweet_text: text from a tweet\n
+    :return: tweet_text cleaned from hashtags
     """
     pattern = re.compile(r"\s#+\S+")
 
@@ -14,7 +15,8 @@ def hashtags_remover(tweet_text: str) -> str:
 def mentions_remover(tweet_text: str) -> str:
     """
     Remove the mentions from a tweet\n
-    Returns a text without any mentions
+    :tweet_text: text from a tweet\n
+    :return: tweet_text cleaned from mentions
     """
     pattern = re.compile(r"\s@+\S+")
 
@@ -25,7 +27,8 @@ def mentions_remover(tweet_text: str) -> str:
 def websites_remover(tweet_text: str) -> str:
     """
     Remove the websites from a tweet\n
-    Returns a text without any website
+    :tweet_text: text from a tweet\n
+    :return: tweet_text cleaned from websites
     """
     pattern = re.compile(r"\S+\\+\S+")
     tweet_text_cleaned_1 = pattern.sub("", tweet_text)
@@ -40,7 +43,8 @@ def remove_duplicates(self) -> str:
     """
     Remove duplicated tweets\n
     - Make an item_id from text and author_id\n
-    - Drop duplicate based on item_id
+    - Drop duplicate based on item_id\n
+    :return: a list of tweets cured from duplicates
     """
     items_id = []
 
@@ -67,9 +71,11 @@ def remove_duplicates(self) -> str:
     else:
         return self._data
 
-def get_big_text(tweets_text_list : list):
+def get_big_text(tweets_text_list : list) -> str:
     """
     Make a big text with all the tweets
+    :tweets_text_list: list of tweets texts
+    :return: a string that is the concatenation of tweets texts
     """
 
     big_text = ' '.join(tweets_text_list)
@@ -81,6 +87,9 @@ def get_big_text(tweets_text_list : list):
 def emojies_remover(big_text : str, lang_ = 'fr_core_news_sm'):
     """
     removes the emojies from the big text
+    :big_text: a string that is the concatenation of tweets texts
+    :lang_: language used to interprete the emojies
+    :return: the big_text cured from emojies
     """
 
     import spacy
