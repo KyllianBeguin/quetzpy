@@ -9,7 +9,7 @@ def connect_twitter(bearer_token):
     
     return twitter_api
 
-def query_tweeter(twitter_api, topic, lang = ""):
+def query_tweeter(twitter_api, topic, lang = "", max_results = 100):
     """
     Extract 100 tweets on the topic\n
     """
@@ -18,13 +18,13 @@ def query_tweeter(twitter_api, topic, lang = ""):
         search = twitter_api.search_recent_tweets(query=f"{topic} lang:{lang} -is:retweet", 
             tweet_fields = ['author_id','created_at','text','source','lang'],
             user_fields = ['name','username','location','verified'],
-            max_results = 100
+            max_results = max_results
             )
     except:
         search = twitter_api.search_recent_tweets(query=f"{topic} -is:retweet", 
             tweet_fields = ['author_id','created_at','text','source','lang'],
             user_fields = ['name','username','location','verified'],
-            max_results = 100
+            max_results = max_results
             )
 
     _data = {"item_" + str(i): search.data[i].data for i in range(len(search.data))}
