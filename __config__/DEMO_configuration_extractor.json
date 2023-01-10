@@ -1,0 +1,19 @@
+{
+    "bearer token": "AAAAAAAAAAAAAAAAAAAAAKv%2FeQEAAAAAjpNwpAvxwFmOvtEXU0OINH6Bgu8%3DYe3fZouisUTJ7XqWStUgx7572AH6JElv6jAe4w0H65UJbGdmYW",
+    "topics": [
+        "#vendredilecture"
+    ],
+    "lang": "fr",
+    "max results": 10,
+    "stats": {
+        "track words": [
+            "philo",
+            "romans"
+        ],
+        "show occurrence": ["hashtags"]
+    },
+    "stats threshold" : {
+        "track words" : 2,
+        "show occurrence" : 1
+    }
+}
