@@ -1,7 +1,0 @@
-{
-    "words to catch" : ["word_1", "word_2"],
-    "topics" : ["topic_1", "topic_2"],
-    "numbers of runs" : 20,
-    "sleeping time" : 300,
-    "lang" : ""
-}
