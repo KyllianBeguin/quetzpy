@@ -1,9 +1,9 @@
-from Quetzalcoatl.params_manager import Params_manager
-import Quetzalcoatl.modules.twitter_connection as connect
-import Quetzalcoatl.modules.data_cleaning as data_cleaning
-import Quetzalcoatl.modules.data_mining as data_mining
-import Quetzalcoatl.modules.data_stats as data_stats
-import Quetzalcoatl.modules.decorators as decorators
+from quetzpy.params_manager import Params_manager
+import quetzpy.modules.twitter_connection as connect
+import quetzpy.modules.data_cleaning as data_cleaning
+import quetzpy.modules.data_mining as data_mining
+import quetzpy.modules.data_stats as data_stats
+import quetzpy.modules.decorators as decorators
 
 class Extractor():
     def __init__(self, Params_manager : Params_manager):

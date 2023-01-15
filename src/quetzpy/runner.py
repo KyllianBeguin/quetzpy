@@ -1,5 +1,5 @@
-from Quetzalcoatl.params_manager import Params_manager
-from Quetzalcoatl.extractor import Extractor
+from quetzpy.params_manager import Params_manager
+from quetzpy.extractor import Extractor
 
 class Runner():
     def __init__(self, Params_manager : Params_manager, Extractor : Extractor) -> None:
