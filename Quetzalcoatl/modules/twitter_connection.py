@@ -1,4 +1,3 @@
-
 import tweepy as tw
 
 def connect_twitter(bearer_token):
