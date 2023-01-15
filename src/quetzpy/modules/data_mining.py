@@ -1,5 +1,5 @@
 import re
-import Quetzalcoatl.modules.data_cleaning as data_cleaning
+import quetzpy.modules.data_cleaning as data_cleaning
 
 def hashtag_extractor(tweet_text: str) -> list:
     """
