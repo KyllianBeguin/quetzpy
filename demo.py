@@ -1,5 +1,7 @@
 # =================================== IMPORT LIBRARIES ====================================
-import src.Quetzalcoatl as Quetzalcoatl
+from Quetzalcoatl.params_manager import Params_manager
+from Quetzalcoatl.extractor import Extractor
+from Quetzalcoatl.runner import Runner
 
 # ========================== [DEFINE] RUN A QUETALCOATL OBJECT ===========================
 def demo():
@@ -8,21 +10,21 @@ def demo():
     After initializing a Quezal baby
     """
     # Invoke a Params_manager object and gic it the DEMO configuration files
-    pm = Quetzalcoatl.Params_manager(name_config_extractor =  "/DEMO_configuration_extractor.json", name_config_runner = "/DEMO_configuration_runner.json",create_files = False)
+    pm = Params_manager(name_config_extractor =  "/DEMO_configuration_extractor.json", name_config_runner = "/DEMO_configuration_runner.json",create_files = False)
     
     # Load the parameters
     pm.load_params()
 
     # Invoke an Extractor object
-    Extractor = Quetzalcoatl.Extractor(Params_manager = pm)
-    Extractor.activate_action("tweet miner")
-    Extractor.set_tweets_stats("show occurrence")
-    Extractor.activate_action("tweets stats")
+    extrac = Extractor(Params_manager = pm)
+    extrac.activate_action("tweet miner")
+    extrac.set_tweets_stats("show occurrence")
+    extrac.activate_action("tweets stats")
 
     # Invoke a Runner object
-    Runner = Quetzalcoatl.Runner(Params_manager = pm, Extractor = Extractor)
+    run = Runner(Params_manager = pm, Extractor = extrac)
 
-    Runner.run_extraction()
+    run.run_extraction()
 
     return
 
