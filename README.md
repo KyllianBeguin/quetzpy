@@ -19,7 +19,7 @@
 The Queztzalcoatl project is the ability to **:eyes: excavate the :bird: Twitter API to extract insights about any topic that people talk about**.  
 From a topic, you should be able to understand how people react using the power of text mining.
 
-:arrow_up: *[Go to top page](#summary)*
+:arrow_up: *[Go to top page](#quetzpy-snake-bird-eyeglasses)*
 
 ## 2. WHAT'S INSIDE THIS REPO ?
 ```
@@ -84,19 +84,19 @@ You will find the two configuration files used by the demo script
 Visuals and stuff
 
 
-:arrow_up: *[Go to top page](#summary)*
+:arrow_up: *[Go to top page](#quetzpy-snake-bird-eyeglasses)*
 
 ## 3. HOW TO USE IT ?
 Want to try the project? Please, follow the instructions from the Wiki page!
 
 
 
-:arrow_up: *[Go to top page](#summary)*
+:arrow_up: *[Go to top page](#quetzpy-snake-bird-eyeglasses)*
 
 ## 4. ABOUT THE PROJECT
 > I started this project a long time ago as my very first Python project. At first, I used some webscraping with Selenium as I didn't know how to use an API. As my experience with Python grew, I switched to the Twitter REST API and bash scripting and started think automation. Now, I am willing to create a package, or even an API inside which it would be possible to track an information inside a topic.
 
-:arrow_up: *[Go to top page](#summary)*
+:arrow_up: *[Go to top page](#quetzpy-snake-bird-eyeglasses)*
 
 ## 5. CONTACT THE AUTHOR
 > You can reach me on Twitter {[LINK](https://twitter.com/BeguinKyllian)}  
@@ -107,4 +107,4 @@ The Quetzalcoatl is a open source project. As so, if you feel interested in buil
 Feel free to contact me on Twitter so I can tell you how you can help.  
 We also have an issue page, [link here](https://github.com/KyllianBeguin/Quetzalcoatl/issues)!
 
-:arrow_up: *[Go to top page](#summary)*
+:arrow_up: *[Go to top page](#quetzpy-snake-bird-eyeglasses)*
