@@ -1,7 +1,7 @@
 # =================================== IMPORT LIBRARIES ====================================
-from Quetzalcoatl.params_manager import Params_manager
-from Quetzalcoatl.extractor import Extractor
-from Quetzalcoatl.runner import Runner
+from quetzpy.params_manager import Params_manager
+from quetzpy.extractor import Extractor
+from quetzpy.runner import Runner
 
 # ========================== [DEFINE] RUN A QUETALCOATL OBJECT ===========================
 def demo():
