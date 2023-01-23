@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "quetzpy"
+version = "0.1.1"
+authors = [
+    {name = "Kyllian Beguin", email = "kyllian.beguin@gmail.com"},
+]
+description = "Analyze how people are talking about any topic on Twitter."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "spacy ~= 3.4",
+    "spacymoji ~= 3.0",
+    "tweepy ~= 4.12",
+]
