@@ -1,13 +1,13 @@
-# Quetzalcoatl :snake: :bird: :eyeglasses:
+# quetzpy :snake: :bird: :eyeglasses:
 *Understand how people are talking of a topic based on a simple query*  
 
 ![](./media./../media/DALL·E%202022-11-15%2017.37.24%20-%20The%20body%20of%20a%20neon%20Quetzalcoatl%20,%20digital%20art.png)
 
-- [Quetzalcoatl :snake: :bird: :eyeglasses:](#quetzalcoatl-snake-bird-eyeglasses)
+- [quetzpy :snake: :bird: :eyeglasses:](#quetzpy-snake-bird-eyeglasses)
   - [1. WHAT IS IT?](#1-what-is-it)
   - [2. WHAT'S INSIDE THIS REPO ?](#2-whats-inside-this-repo-)
     - [2.1 root folder](#21-root-folder)
-    - [2.2 src folder](#22-src-folder)
+    - [2.2 src/quetzpy folder](#22-srcquetzpy-folder)
     - [2.3 \_\_config\_\_ folder](#23-__config__-folder)
     - [2.4 media folder](#24-media-folder)
   - [3. HOW TO USE IT ?](#3-how-to-use-it-)
@@ -28,16 +28,20 @@ Quetzalcoatl
 │   ├── DEMO_configuration_extractor.json
 │   └── DEMO_configuration_runner.json
 ├── /media
-├── /src
-│   ├── /modules
-│   │   ├── data_cleaning.py  
-│   │   ├── data_mining.py  
-│   │   ├── data_stats.py  
-│   │   ├── decorators.py  
-│   │   └── tweeter_connection.py  
-│   └── Quetzalcoatl.py
+├── /src/quetzpy
+│       ├── /modules
+│       │   ├── data_cleaning.py  
+│       │   ├── data_mining.py  
+│       │   ├── data_stats.py  
+│       │   ├── decorators.py  
+│       │   └── tweeter_connection.py  
+│       ├── __init__.py
+│       ├── extractor.py
+│       ├── params_manager.py
+│       └── runner.py
 ├── requirements.txt
 ├── demo.py
+├── pyproject.toml
 ├── .gitignore  
 ├── README.md
 └── LICENCE
@@ -47,28 +51,37 @@ You will find:
 | File | Description |  
 | ----------- | ----------- |  
 | requirements.txt | Used by pip to install dependancies |  
-| demo.py | A demo script  |   
+| demo.py | The demo, [more information here]()  |   
+| pyproject.toml | the configuration file to used for build library  |   
 | .gitignore | - |   
 | README.md | - |   
 | LICENCE | - |   
 
-### 2.2 src folder
+### 2.2 src/quetzpy folder
 You will find:
 | File | Description |  
 | ----------- | ----------- |  
-| /src/modules | Contains modules used by the project |  
-| /src/modules/data_cleaning.py | module used to clean the tweets  |   
-| /src/modules/data_mining.py | module used to extract insights from each tweets |   
-| /src/modules/data_stats.py | module used to run some statistics from the mined data or tracked words |   
-| /src/modules/decorators.py | module that contains all the decorators |   
-| /src/modules/tweeter_connection.py | module used to connect to the Twitter API |   
-| /src/Quetzalcoatl.py | Contains all the classes of the project |   
+| /src/quetzpy/\__init__.py | Package initializer |   
+| /src/quetzpy/extractor.py | Class used to extract data from Twitter |   
+| /src/quetzpy/params_manager.py | Class used to contain all the data needed to run the extractor and the runner |   
+| /src/quetzpy/runner.py | Class used to run the extraction during a defined time and frequence |   
+
+
+| File | Description |  
+| ----------- | ----------- |  
+| /src/quetzpy/modules | Contains modules used by the project |  
+| /src/quetzpy/modules/data_cleaning.py | Module used to clean the tweets  |   
+| /src/quetzpy/modules/data_mining.py | module used to extract insights from each tweets |   
+| /src/quetzpy/modules/data_stats.py | module used to run some statistics from the mined data or tracked words |   
+| /src/quetzpy/modules/decorators.py | module that contains all the decorators |   
+| /src/quetzpy/modules/tweeter_connection.py | module used to connect to the Twitter API |   
+
 
 ### 2.3 \_\_config__ folder
 You will find the two configuration files used by the demo script
 
 ### 2.4 media folder
-All the stuff that are used to produce documents
+Visuals and stuff
 
 
 :arrow_up: *[Go to top page](#summary)*
